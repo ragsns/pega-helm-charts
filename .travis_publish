@@ -12,7 +12,7 @@ cp ../build/ragsns/pega-helm-charts/*.tgz .
 echo echoing values
 echo $HOME
 ls -l $HOME
-ls -lR $HOME/build
+find $HOME -name \*.tgz
 echo $REPO_PATH
 pwd
 ls -la
