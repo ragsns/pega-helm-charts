@@ -7,7 +7,7 @@ git clone --branch=$PUBLICATION_BRANCH    https://${GITHUB_TOKEN}@github.com/$TR
 cd publish
 # Update pages
 cp -r $REPO_PATH/ .
-cp ../*.tgz ../index.yaml .
+cp $HOME/*.tgz $HOME/index.yaml .
 echo echoing values
 echo $HOME
 echo $REPO_PATH
