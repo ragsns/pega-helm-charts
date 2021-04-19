@@ -97,7 +97,8 @@ deploy:
         a/rvc6hM6quXSmlAwA0U=
     file:
         - index.yaml
-        - *.tgz
+    file_glob: true
+    file: *.tgz
     skip_cleanup: true
     target_branch: gh-pages
     keep_history: true
