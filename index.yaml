@@ -3,7 +3,45 @@ entries:
   addons:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-04-19T06:43:52.970617706Z"
+    created: "2021-04-19T06:57:30.475139163Z"
+    dependencies:
+    - condition: traefik.enabled
+      name: traefik
+      repository: https://charts.helm.sh/stable
+      version: 1.77.1
+    - condition: aws-load-balancer-controller.enabled
+      name: aws-load-balancer-controller
+      repository: https://aws.github.io/eks-charts
+      version: 1.1.0
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://helm.elastic.co/
+      version: 7.8.1
+    - condition: fluentd-elasticsearch.enabled
+      name: fluentd-elasticsearch
+      repository: https://kiwigrid.github.io/
+      version: 9.6.0
+    - condition: kibana.enabled
+      name: kibana
+      repository: https://helm.elastic.co/
+      version: 7.8.1
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://charts.helm.sh/stable
+      version: 2.8.4
+    - condition: ingress-azure.enabled
+      name: ingress-azure
+      repository: https://appgwingress.blob.core.windows.net/ingress-azure-helm-package/
+      version: 1.2.0
+    description: A Helm chart for Kubernetes
+    digest: 03aa7ac3b13db287150a8c28456aaf11badf87059d358dac935261a557b48a2a
+    name: addons
+    urls:
+    - https://ragsns.github.io/pega-helm-charts/addons-2.9.0.tgz
+    version: 2.9.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-19T06:57:30.463959575Z"
     dependencies:
     - condition: traefik.enabled
       name: traefik
@@ -41,7 +79,45 @@ entries:
     version: 1.9.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-04-19T06:43:52.958936525Z"
+    created: "2021-04-19T06:57:30.507943443Z"
+    dependencies:
+    - condition: traefik.enabled
+      name: traefik
+      repository: https://charts.helm.sh/stable
+      version: 1.77.1
+    - condition: aws-load-balancer-controller.enabled
+      name: aws-load-balancer-controller
+      repository: https://aws.github.io/eks-charts
+      version: 1.1.0
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://helm.elastic.co/
+      version: 7.8.1
+    - condition: fluentd-elasticsearch.enabled
+      name: fluentd-elasticsearch
+      repository: https://kiwigrid.github.io/
+      version: 9.6.0
+    - condition: kibana.enabled
+      name: kibana
+      repository: https://helm.elastic.co/
+      version: 7.8.1
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://charts.helm.sh/stable
+      version: 2.8.4
+    - condition: ingress-azure.enabled
+      name: ingress-azure
+      repository: https://appgwingress.blob.core.windows.net/ingress-azure-helm-package/
+      version: 1.2.0
+    description: A Helm chart for Kubernetes
+    digest: a468ae9944c5b71fbee54abaa0143e4481ecb1d3ac41eda489d5d1d2ad8a24bb
+    name: addons
+    urls:
+    - https://ragsns.github.io/pega-helm-charts/xx/addons-1.9.0.tgz
+    version: 1.9.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-19T06:57:30.453258888Z"
     dependencies:
     - condition: traefik.enabled
       name: traefik
@@ -79,7 +155,7 @@ entries:
     version: 1.8.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-04-19T06:43:52.989705411Z"
+    created: "2021-04-19T06:57:30.497534548Z"
     dependencies:
     - condition: traefik.enabled
       name: traefik
@@ -231,7 +307,21 @@ entries:
     version: 1.5.0
   backingservices:
   - apiVersion: v1
-    created: "2021-04-19T06:43:52.975838437Z"
+    created: "2021-04-19T06:57:30.482844382Z"
+    dependencies:
+    - condition: srs.srsStorage.provisionInternalESCluster
+      name: elasticsearch
+      repository: https://helm.elastic.co/
+      version: 7.9.3
+    description: A Helm chart for Kubernetes
+    digest: cd687e42a127f18df58534f058ccf99726cb332a830bf12ca487425b4ead6988
+    name: backingservices
+    type: application
+    urls:
+    - https://ragsns.github.io/pega-helm-charts/backingservices-2.9.0.tgz
+    version: 2.9.0
+  - apiVersion: v1
+    created: "2021-04-19T06:57:30.480306566Z"
     dependencies:
     - condition: srs.srsStorage.provisionInternalESCluster
       name: elasticsearch
@@ -245,7 +335,21 @@ entries:
     - https://ragsns.github.io/pega-helm-charts/backingservices-1.9.0.tgz
     version: 1.9.0
   - apiVersion: v1
-    created: "2021-04-19T06:43:52.973183267Z"
+    created: "2021-04-19T06:57:30.513553907Z"
+    dependencies:
+    - condition: srs.srsStorage.provisionInternalESCluster
+      name: elasticsearch
+      repository: https://helm.elastic.co/
+      version: 7.9.3
+    description: A Helm chart for Kubernetes
+    digest: ce5457bbd603859a1bcc1e1b175f1d9dc77d4dfdbc887b4015cba5a15a598ab5
+    name: backingservices
+    type: application
+    urls:
+    - https://ragsns.github.io/pega-helm-charts/xx/backingservices-1.9.0.tgz
+    version: 1.9.0
+  - apiVersion: v1
+    created: "2021-04-19T06:57:30.47772835Z"
     dependencies:
     - condition: srs.srsStorage.provisionInternalESCluster
       name: elasticsearch
@@ -259,7 +363,7 @@ entries:
     - https://ragsns.github.io/pega-helm-charts/backingservices-1.8.0.tgz
     version: 1.8.0
   - apiVersion: v1
-    created: "2021-04-19T06:43:52.992230429Z"
+    created: "2021-04-19T06:57:30.51051413Z"
     dependencies:
     - condition: srs.srsStorage.provisionInternalESCluster
       name: elasticsearch
@@ -316,7 +420,7 @@ entries:
     version: 1.5.0
   pega:
   - apiVersion: v1
-    created: "2021-04-19T06:43:52.979352589Z"
+    created: "2021-04-19T06:57:30.488703363Z"
     dependencies:
     - condition: cassandra.enabled
       name: cassandra
@@ -334,7 +438,7 @@ entries:
     - https://ragsns.github.io/pega-helm-charts/pega-1.8.0.tgz
     version: 1.8.0
   - apiVersion: v1
-    created: "2021-04-19T06:43:52.998076692Z"
+    created: "2021-04-19T06:57:30.518898504Z"
     dependencies:
     - condition: cassandra.enabled
       name: cassandra
@@ -405,4 +509,4 @@ entries:
     urls:
     - https://ragsns.github.io/pega-helm-charts/pega-1.5.0.tgz
     version: 1.5.0
-generated: "2021-04-19T06:43:52.949752369Z"
+generated: "2021-04-19T06:57:30.443674749Z"
