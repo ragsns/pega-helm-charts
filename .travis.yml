@@ -124,7 +124,7 @@ deploy:
      target_branch: gh-pages
      keep_history: true
      verbose: true
-    on:
-      repo: ragsns/pega-helm-charts
-      all_branches: true
-      draft: true 
+     on:
+       repo: ragsns/pega-helm-charts
+       all_branches: true
+       draft: true 
