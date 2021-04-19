@@ -7,6 +7,9 @@ git clone --branch=$PUBLICATION_BRANCH    https://${GITHUB_TOKEN}@github.com/$TR
 cd publish
 # Update pages
 cp -r $REPO_PATH/ .
+echo echoing values
+pwd
+ls -la
 # Commit and push latest version
 git add .
 git config user.name  "Travis"
