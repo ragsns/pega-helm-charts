@@ -95,6 +95,7 @@ deploy:
     skip_cleanup: true
     target_branch: gh-pages
     keep_history: true
+    verbose: true
     on:
       all_branches: true
       repo: ragsns/pega-helm-charts
