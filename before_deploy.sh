@@ -12,7 +12,7 @@ curl -o index.yaml https://ragsns.github.io/pega-helm-charts/index.yaml
 git clone -b gh-pages https://github.com/ragsns/pega-helm-charts.git xx 
 cp xx/*.tgz .
 rm -rf xx
-rm -rf .github docs linux-amd64 terratest 
+# rm -rf .github docs linux-amd64 terratest 
 helm package --version ${CHART_VERSION} ./charts/pega/
 helm package --version ${CHART_VERSION} ./charts/addons/
 helm package --version ${CHART_VERSION} ./charts/backingservices/
