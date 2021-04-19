@@ -7,6 +7,7 @@ git clone --branch=$PUBLICATION_BRANCH    https://${GITHUB_TOKEN}@github.com/$TR
 cd publish
 # Update pages
 cp -r $REPO_PATH/ .
+cp /home/travis/build/ragsns/pega-helm-charts/*.tgz .
 echo echoing values
 pwd
 ls -la
