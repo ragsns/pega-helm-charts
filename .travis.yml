@@ -72,11 +72,6 @@ deploy:
     on:
       repo: ragsns/pega-helm-charts
       tags: true
-  - provider: script 
-    script: bash .travis_publish
-    on:
-      all_branches: true
-      draft: true
   - provider: pages
     github-token: $GITHUB_TOKEN
     api_key:

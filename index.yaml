@@ -3,7 +3,45 @@ entries:
   addons:
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-04-20T00:04:03.795357868Z"
+    created: "2021-04-20T00:19:17.913538999Z"
+    dependencies:
+    - condition: traefik.enabled
+      name: traefik
+      repository: https://charts.helm.sh/stable
+      version: 1.77.1
+    - condition: aws-load-balancer-controller.enabled
+      name: aws-load-balancer-controller
+      repository: https://aws.github.io/eks-charts
+      version: 1.1.0
+    - condition: elasticsearch.enabled
+      name: elasticsearch
+      repository: https://helm.elastic.co/
+      version: 7.8.1
+    - condition: fluentd-elasticsearch.enabled
+      name: fluentd-elasticsearch
+      repository: https://kiwigrid.github.io/
+      version: 9.6.0
+    - condition: kibana.enabled
+      name: kibana
+      repository: https://helm.elastic.co/
+      version: 7.8.1
+    - condition: metrics-server.enabled
+      name: metrics-server
+      repository: https://charts.helm.sh/stable
+      version: 2.8.4
+    - condition: ingress-azure.enabled
+      name: ingress-azure
+      repository: https://appgwingress.blob.core.windows.net/ingress-azure-helm-package/
+      version: 1.2.0
+    description: A Helm chart for Kubernetes
+    digest: 1aed76cab85c9e623f4b24087105fa5fae13458bb393032268f25444d2cc18fb
+    name: addons
+    urls:
+    - https://ragsns.github.io/pega-helm-charts/addons-12.5.0.tgz
+    version: 12.5.0
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-20T00:19:17.901707406Z"
     dependencies:
     - condition: traefik.enabled
       name: traefik
@@ -41,7 +79,7 @@ entries:
     version: 11.9.0
   - apiVersion: v1
     appVersion: "1.0"
-    created: "2021-04-20T00:04:03.784186936Z"
+    created: "2021-04-20T00:19:17.890317148Z"
     dependencies:
     - condition: traefik.enabled
       name: traefik
@@ -79,7 +117,21 @@ entries:
     version: 10.9.0
   backingservices:
   - apiVersion: v1
-    created: "2021-04-20T00:04:03.800595083Z"
+    created: "2021-04-20T00:19:17.92158879Z"
+    dependencies:
+    - condition: srs.srsStorage.provisionInternalESCluster
+      name: elasticsearch
+      repository: https://helm.elastic.co/
+      version: 7.9.3
+    description: A Helm chart for Kubernetes
+    digest: 8fc49714245a25cdfdb7cbd944fbe22fbcbb4f8c6404f61e5576fd2247fb6ffc
+    name: backingservices
+    type: application
+    urls:
+    - https://ragsns.github.io/pega-helm-charts/backingservices-12.5.0.tgz
+    version: 12.5.0
+  - apiVersion: v1
+    created: "2021-04-20T00:19:17.918852453Z"
     dependencies:
     - condition: srs.srsStorage.provisionInternalESCluster
       name: elasticsearch
@@ -93,7 +145,7 @@ entries:
     - https://ragsns.github.io/pega-helm-charts/backingservices-11.9.0.tgz
     version: 11.9.0
   - apiVersion: v1
-    created: "2021-04-20T00:04:03.798036692Z"
+    created: "2021-04-20T00:19:17.916154168Z"
     dependencies:
     - condition: srs.srsStorage.provisionInternalESCluster
       name: elasticsearch
@@ -108,7 +160,25 @@ entries:
     version: 10.9.0
   pega:
   - apiVersion: v1
-    created: "2021-04-20T00:04:03.810758747Z"
+    created: "2021-04-20T00:19:17.936074927Z"
+    dependencies:
+    - condition: cassandra.enabled
+      name: cassandra
+      repository: https://charts.helm.sh/incubator
+      version: 0.13.3
+    description: Pega installation on kubernetes
+    digest: 020de7e67ac8a3507b4826ca0e5aaf1f27da5fae49e994fa63006cf565ed0aeb
+    home: http://www.pega.com
+    keywords:
+    - pega
+    - prpc
+    - kubernetes
+    name: pega
+    urls:
+    - https://ragsns.github.io/pega-helm-charts/pega-12.5.0.tgz
+    version: 12.5.0
+  - apiVersion: v1
+    created: "2021-04-20T00:19:17.932160922Z"
     dependencies:
     - condition: cassandra.enabled
       name: cassandra
@@ -126,7 +196,7 @@ entries:
     - https://ragsns.github.io/pega-helm-charts/pega-11.9.0.tgz
     version: 11.9.0
   - apiVersion: v1
-    created: "2021-04-20T00:04:03.80698577Z"
+    created: "2021-04-20T00:19:17.927470215Z"
     dependencies:
     - condition: cassandra.enabled
       name: cassandra
@@ -143,4 +213,4 @@ entries:
     urls:
     - https://ragsns.github.io/pega-helm-charts/pega-10.9.0.tgz
     version: 10.9.0
-generated: "2021-04-20T00:04:03.774261931Z"
+generated: "2021-04-20T00:19:17.880165339Z"
