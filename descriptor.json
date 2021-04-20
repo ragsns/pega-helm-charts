@@ -13,22 +13,22 @@
   },
   "files": [
     {
-      "includePattern": "pega-10.9.0.tgz",
-      "uploadPattern": "pega-10.9.0.tgz",
+      "includePattern": "pega-11.9.0.tgz",
+      "uploadPattern": "pega-11.9.0.tgz",
       "matrixParams": {
         "override": 1
       }
     },
     {
-      "includePattern": "addons-10.9.0.tgz",
-      "uploadPattern": "addons-10.9.0.tgz",
+      "includePattern": "addons-11.9.0.tgz",
+      "uploadPattern": "addons-11.9.0.tgz",
       "matrixParams": {
         "override": 1
       }
     },
     {
-      "includePattern": "backingservices-10.9.0.tgz",
-      "uploadPattern": "backingservices-10.9.0.tgz",
+      "includePattern": "backingservices-11.9.0.tgz",
+      "uploadPattern": "backingservices-11.9.0.tgz",
       "matrixParams": {
         "override": 1
       }
